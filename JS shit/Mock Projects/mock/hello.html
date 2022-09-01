@@ -1,0 +1,45 @@
+<html>
+    <body>
+        <h2 id="header">ENTER YOUR AGE</h2>
+        <input type="text" id="age"/>
+        <button onclick="age()">CLICK!</button>
+        <p id="msg"></p>
+
+        <script type="text/javascript">
+            const covers=[
+                {org_singer: 'Zayn Malik', place:'vlive'},
+                {org_singer:'Justin Bieber', place:'cover video'},
+                {org_singer:'5SOS', place:'weekly idol'}
+
+            ];
+            //console.log(covers)
+            let user={
+                name:'Kang Taehyun',
+                age: 20,
+                position: 'Main Vocal',
+                headquarters:'Hybe Labels',
+                covers: [
+                {org_singer: 'Zayn Malik', place:'vlive'},
+                {org_singer:'Justin Bieber', place:'cover video'},
+                {org_singer:'5SOS', place:'weekly idol'}
+            ],
+                singing(){
+                    console.log('THIS DUDE HAS COVERED THE FOLLOWING SONGS')
+                    this.covers.forEach(cover=>{
+                        console.log(cover.org_singer, cover.place)
+                    })
+                },
+                    
+                savage(){
+                    console.log('BRO IS THE LAST FUNCTIONING BRAIN CELL OF BIG HIT.')
+                }
+            }
+                     
+            user.singing();
+            //user.savage();
+
+        </script>
+
+    </body>
+    
+</html>

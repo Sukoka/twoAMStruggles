@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background:lightgreen;
+}
+.wrapper{
+    background:lightyellow;
+    width: 400px;
+    height: auto;
+    border-radius:6px;
+}
+
+.wrapper header{
+    font-size: 25px;
+    font-weight: 500;
+    padding: 15px 15px;
+    border-bottom: greenyellow 1px solid;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper.active header i{
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+header i{
+    cursor: pointer;
+    font-size: 0em;
+    margin-right: 9px;
+}
+
+.wrapper .input-part{
+    padding: 20px 30px 30px;
+    height: auto;
+    /* display: none; */
+}
+
+.wrapper.active .input-part{
+    display: none;
+}
+.input-part input{
+    border: palegreen 1px solid;
+    text-align: center;
+    width: 100%;
+    height: 55px;
+    outline: none;
+    border-radius: 6px;
+    font-size: 18px;
+}
+.input-part input:is(:focus, :valid){
+    border:lightgreen 2px solid;
+}
+.input-part .separator{
+    height: 1px;
+    width: 100%;
+    margin: 25px 0;
+    background: greenyellow;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+.separator::before{
+    content: "or";
+    color: black;
+    font-size: 19px;
+    padding: 0px 15px;
+    background: lightyellow;
+}
+.input-part .info-txt{
+    display: none;
+    font-size: 18px;
+    padding: 12px 10px;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 6px;
+}
+
+.info-txt.error{
+    display: block;
+    color: black;
+    background: salmon;
+}
+
+.info-txt.pending{
+    display: block;
+    color: white;
+    background:#9fc3da;
+}
+
+.input-part button{
+    background: palegreen;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    width: 100%;
+    height: 55px;
+    /* margin-bottom: 10px; */
+}
+
+.wrapper .weather{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px 0 0;
+    display: none;
+}
+
+.wrapper.active .weather{
+    display: flex;
+    /* margin-top: 5px; */
+}
+
+.weather img{
+    max-width: 70px;
+}
+
+.weather .temperature{
+    display: flex;
+    font-size: 50px;
+    font-weight: 600;
+}
+.weather .temperature .numb{
+    font-weight: 1000;
+    display: block;
+    margin-bottom: 5px;
+}
+.weather .temperature .degree{
+    font-size: 46px;
+    margin: 10px 5px 0;
+    display: block;
+}
+
+.weather .location{
+    font-size: 17px;
+    font-weight: 400;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.location i{
+    font-size: 17px;
+    margin-right: 3px;
+}
+
+.weather .bottom-details{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px greenyellow solid;
+}
+
+.bottom-details .column{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.column i{
+    font-size: 32px;
+    color: greenyellow;
+    margin-right: 5px;
+}
+
+.column.humidity{
+    border-left: greenyellow 1px solid;
+}
+
+.details .temperature, .humidity span{
+    font-size: 19px;
+    font-weight: 400;
+    margin-top: -2px;
+}
+
+.details .temperature .degree{
+    font-size: 33px;
+    padding: 0 ;
+    margin: 0;
+}
+
+.details p{
+    font-size: 14px;
+    margin-top: 4px;
+}
