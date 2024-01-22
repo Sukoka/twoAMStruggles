@@ -1,3 +1,4 @@
+//not only checking the odd and even indexes. 
 class Solution {
     public int rob(int[] nums) {
         int n = nums.length; 
